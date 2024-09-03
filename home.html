@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Document</title>
+</head>
+
+<script>
+    function Compute(){
+        var NameValue = document.getElementById('Name').value;
+        var totalname ="name: " + NameValue;
+        var IPIValue = document.getElementById('IP1').value;
+        var totalIpi ="IP1: " + IPIValue;
+        var IMIValue = document.getElementById('IM1').value;
+        var totalImi ="IM1: " + IMIValue;
+        var OPPValue = document.getElementById('OPP').value;
+        var totalOpp ="OPP: " + OPPValue;
+        var EDPValue = document.getElementById('EDP').value;
+        var totalEdp ="EDP: " + EDPValue;
+        var HCI2Value = document.getElementById('HCI2').value;
+        var totalHci2 ="HCI2: " + HCI2Value;
+        var totalGrade = ( Number(IPIValue) + Number(IMIValue) + Number(OPPValue) + Number(EDPValue) + Number(HCI2Value)) / 5;
+        
+        alert(totalname + "\n" + totalIpi + "\n" + totalImi + "\n" + totalOpp + "\n" + totalEdp + "\n" + totalHci2 + "\n" + "average: " +  totalGrade) ;
+
+    }
+    
+</script>
+
+<body>
+
+<div class="box">
+    <form>
+        <div class="inputBox">
+            <input type="text" id="Name" required = "required">
+            <span>Name</span>
+            <i></i>
+        </div>
+
+        <h2>Grade</h2>
+
+        <div class="inputBox">
+            <input type="text" id="IP1" required = "required">
+            <span>IPI</span>
+            <i></i>
+        </div>
+
+        <div class="inputBox">
+            <input type="text" id="IM1" required = "required">
+            <span>IMI</span>
+            <i></i>
+        </div>
+
+        <div class="inputBox">
+            <input type="text" id="OPP" required = "required">
+            <span>OPP</span>
+            <i></i>
+        </div>
+
+        <div class="inputBox">
+            <input type="text" id="EDP" required = "required">
+            <span>EDP</span>
+            <i></i>
+        </div>
+
+        <div class="inputBox">
+            <input type="text" id="HCI2" required = "required">
+            <span>HCI2</span>
+            <i></i>
+        </div>
+
+        <input type="submit" onclick="Compute()" value="Compute">
+    </form>
+</div>
+
+
+
+
+
+
+
+</body>
+
+</html>
